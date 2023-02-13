@@ -1,0 +1,233 @@
+aside, article, section, nav, header, footer{
+    display: block;
+    margin: 0;
+}
+html, body{
+    margin: 0;
+    padding: 0;
+}
+html{
+    background: #F1F3F4;
+}
+body{
+    background: red;
+}
+
+/* etiquetas para fuentes */
+
+h1{
+    color: #512B58;
+    font-size: 2.2;
+    text-align: center;
+    margin: 5px 20px;
+}
+
+h2{
+    color: #F1F3F4;
+    font-size: 1.8;
+    text-align: center;
+}
+
+h3{
+    color: #79BAC1;
+    font-size: 0.8;
+    text-align: center;
+}
+
+p {
+    color: #F1F3F4;
+    margin: 5px 20px;
+}
+
+h4 {
+    color: #79BAC1;
+    font-size: x-small;
+    text-align: center;
+}
+
+/* etiquetas de barra de navegacion */
+
+.head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 63px;
+    background: #2A7886;
+    position:fixed;
+    width: 100%;
+}
+.navbar {
+    display: flex;
+    margin-top: 10px;
+}
+.logo {
+    margin-left: 30px;
+}
+.logo a {
+    text-decoration: none;
+    color:#F1F3F4;
+    text-transform: uppercase;
+    font-size: 20px;
+}
+.navbar a {
+    display: block;
+    padding: 20px 20px;
+    margin-bottom: 10px;
+    color: #F1F3F4;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 20px;
+}
+
+.navbar a:hover {
+    background: #79BAC1;
+}
+
+
+/* etiquetas de Carrusel */
+.carrusel {
+    background: #512B58;
+}
+
+.carrusel ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    color: #512B58;
+    max-width: 1000px;
+}
+
+.Carrusel-fotos {
+    color: #512B58;
+    display: flex;
+    overflow: auto;
+    scroll-behavior: smooth;
+}
+
+.Carrusel-fotos img {
+    border: 5px solid #512B58;
+    width: 300px;
+    height: 200px;
+    object-fit: fill;
+}
+
+.Carrusel-menu {
+    display: none;
+}
+
+#Carrusel{
+    background: #512B58;
+}
+
+@media screen and (min-width:500px) {
+    .Carrusel-fotos {
+        overflow: hidden;
+    }
+    .Carrusel-fotos img {
+        height: 400px;
+        width: 820px;
+    }
+    .Carrusel-menu { 
+        display:block;
+        justify-content: center;
+        color: #512B58;
+        display: flex;
+        gap: 30px;
+    }
+    .Carrusel-menu img {
+        box-sizing: border-box;
+        width: 40px;
+        height: 30px;
+        border: 5px solid #2A7886;
+    }
+    .Carrusel-menu img:hover {
+        border: none;
+    }
+    #Carrusel{
+        background: #512B58;
+        height: 480px;
+    }
+}
+
+/* etiquetas de estructura */
+
+body {
+    width: 100%;
+    margin: 0 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer {
+    height: 50px;
+    clear: both;
+    background: #512B58;
+}
+
+
+#Col1{
+    height: 50px;
+    background: aqua;
+    width: 15%;
+    float: left;
+    opacity: 0;
+}
+#Col2{
+    height: 100%;
+    background: #79BAC1;
+    width: 70%;
+    float: left;
+    position: static;
+}
+#Col3{
+    height: 50px;
+    background: aqua;
+    width: 15%;
+    float: left;
+    opacity: 0;
+}
+
+#notas {
+    background: #2A7886;
+    float: left;
+    justify-content: left;
+    height: 300px;
+    width: 70%;
+}
+
+.notas h3 {
+    position: relative;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -35%);
+}
+
+.notas p {
+    position: relative;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -40%);
+}
+
+#video1 {
+    width: 30%;
+    height: 300px;
+    float: left;
+}
+.video1 iframe {
+    width: 100%;
+    height: 100%;
+}
+#bottom {
+    background: #512B58;
+    float: left;
+    justify-content: left;
+    height: 40px;
+    width: 100%;
+}
