@@ -1,0 +1,145 @@
+aside, article, section, nav, header, footer{
+    display: block;
+    margin: 0;
+}
+html, body{
+    margin: 0;
+    padding: 0;
+}
+html{
+    background: #F1F3F4;
+}
+body{
+    background: red;
+}
+
+/* etiquetas para fuentes */
+
+h1{
+    color: #512B58;
+    font-size: 2.2;
+    text-align: center;
+    margin: 5px 20px;
+}
+
+h2{
+    color: #F1F3F4;
+    font-size: 1.8;
+    text-align: center;
+}
+
+h3{
+    color: #79BAC1;
+    font-size: 0.8;
+    text-align: center;
+}
+
+p {
+    color: #F1F3F4;
+    margin: 5px 20px;
+}
+
+h4 {
+    color: #79BAC1;
+    font-size: x-small;
+    text-align: center;
+}
+
+/* etiquetas de barra de navegacion */
+
+.head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 63px;
+    background: #2A7886;
+    position:fixed;
+    width: 100%;
+}
+.navbar {
+    display: flex;
+    margin-top: 10px;
+}
+.logo {
+    margin-left: 30px;
+}
+.logo a {
+    text-decoration: none;
+    color:#F1F3F4;
+    text-transform: uppercase;
+    font-size: 20px;
+}
+.navbar a {
+    display: block;
+    padding: 20px 20px;
+    margin-bottom: 10px;
+    color: #F1F3F4;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 20px;
+}
+
+.navbar a:hover {
+    background: #79BAC1;
+}
+
+/* etiquetas de estrutura */
+
+
+body {
+    width: 100%;
+    margin: 0 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer {
+    height: 50px;
+    clear: both;
+    background: #512B58;
+}
+
+#basura {
+    color:#F1F3F4;
+    border: 20px;
+    margin: 20px;
+}
+
+.logueo {
+    width: 100%;
+    height: 200%;
+}
+
+.logueo ul {
+    display: table ;
+    justify-content: center;
+    color: #79BAC1;
+    position: relative;
+    gap: 30px;
+}
+
+.logueo h5 {
+    color: #512B58;
+}
+
+#logueo-base {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    float:left;
+    height: 40%;
+    width: 30%;
+    background-color: #79BAC1;
+}
+
+    /*
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    */
+
