@@ -231,3 +231,55 @@ footer {
     height: 40px;
     width: 100%;
 }
+
+/*     login     */
+
+#dialog {
+    border-color: #2A7886;
+    background-color: #79BAC1;
+    position: fixed;
+    top: 20px;
+    left: 0%;
+}
+
+#bott {
+    margin-top: 0;
+    position: relative;
+    justify-content: center;
+
+}
+#btnC {
+    font-size: 20px;
+    color: #2A7886;
+    font-weight: bolder;
+    position: absolute;
+    top: 0%;
+    left: 90%;
+    border: #79BAC1;
+    background: #79BAC1;
+}
+
+#boton {
+    border-color: #2A7886;
+    background: #2A7886;
+    color: #79BAC1;
+ }
+
+ .Dia div {
+    margin-top: 10px;
+    position: static;
+    text-align: center;
+ }
+
+ .Dia h5{
+    color: #512B58;
+    font-weight: bolder;
+    font-size: 20px;
+    margin: 0 0 10px 0;
+ }
+
+ .Dia ul {
+    position: relative;
+    left: -20px;
+    color: #79BAC1;
+ }

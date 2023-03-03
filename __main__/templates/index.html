@@ -9,6 +9,7 @@
 </head>
 <body>
     <header></header>
+
     <div class="head">
         <div class="logo">
             <a> El matasanos </a>    
@@ -16,9 +17,27 @@
         <nav class="navbar">
             <a href="#">NOSOTROS</a>
             <a href="#">CONTACTANOS</a>
-            <a href="../templates/login.html">LOGIN</a>
+            <a id="btnA">LOGIN</a>
         </nav>
     </div>
+
+    <dialog class="Dia" id="dialog">
+        <button  id="btnC"> x </button>
+        <div  id="bott">
+            <h5> INICIA SECION </h5>
+            <ul>
+                <li><input class="input" type="text" placeholder="&#128100; Nombre" required autofocus></li>
+                <li>
+                <input class="input" type="text" placeholder="&#9993; Correo" required autofocus>
+                </li>
+            </ul>
+        </div>
+        <div>
+            <input id="boton" class="button-sub" type="submit" value="REGISTRAR">
+            <input id="boton" class="button-res" type="reset" value="LIMPIAR">
+        </div>
+    </dialog>
+
     <div class="Carrusel" id="Carrusel">
         <ul class="Carrusel-fotos">
             <li id="foto1"><img src="../static/Images/Imagen01.jpg" alt=""></li>
@@ -31,6 +50,7 @@
             <li><a href="#foto3"><img src="../static/Images/imagen03.jpg" alt=""></a></li>
         </ul>
     </div>
+
     <section>
         <aside id="Col1"></aside>
         <article id="Col2">
@@ -46,6 +66,7 @@
         </article>
         <aside id="Col3"></aside>
     </section>
+
     <section>
         <div class="notas" id="notas">
             <h3>lorem</h3>
@@ -59,10 +80,14 @@
             <iframe src="https://www.youtube.com/embed/XJxBY-7WS-w?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
         </div>
     </section>
+
     <section>
         <div id="bottom">
             <h4> Copyright 2079 - El matasanos, Los Juanes S.A.</h4>
         </div>
     </section>
+
+    <script type="text/javascript" src="/home/cedrick/CarpetaWeb/__main__/static/Js/login.js"></script>
+
 </body>
 </html>
