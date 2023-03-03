@@ -87,7 +87,23 @@
         </div>
     </section>
 
-    <script type="text/javascript" src="/home/cedrick/CarpetaWeb/__main__/static/Js/login.js"></script>
+    <!-- <script type="text/javascript" src="__main__/static/Js/Login.js"></script> -->
+
+    <script>
+        const $dialog = document.getElementById("dialog");
+        const $btnA = document.getElementById("btnA");
+        const $btnC = document.getElementById("btnC");
+
+        $btnA.addEventListener("click",() => 
+        {
+            $dialog.showModal();
+        })
+
+        $btnC.addEventListener("click",() =>
+        {
+            $dialog.close();
+        })
+    </script>
 
 </body>
 </html>
