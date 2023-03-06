@@ -16,26 +16,30 @@
         </div>
         <nav class="navbar">
             <a href="#">NOSOTROS</a>
-            <a href="#">CONTACTANOS</a>
+            <a href="/templates/login.html">CONTACTANOS</a>
             <a id="btnA">LOGIN</a>
         </nav>
     </div>
 
     <dialog class="Dia" id="dialog">
         <button  id="btnC"> x </button>
-        <div  id="bott">
-            <h5> INICIA SECION </h5>
-            <ul>
-                <li><input class="input" type="text" placeholder="&#128100; Nombre" required autofocus></li>
-                <li>
-                <input class="input" type="text" placeholder="&#9993; Correo" required autofocus>
-                </li>
-            </ul>
-        </div>
-        <div>
-            <input id="boton" class="button-sub" type="submit" value="REGISTRAR">
-            <input id="boton" class="button-res" type="reset" value="LIMPIAR">
-        </div>
+        <form action="../static/Sql/Login.php" method="post">
+            <div  id="bott">
+                <h5> INICIA SECION </h5>
+                <ul>
+                    <li>
+                        <input class="input" name="Nombre" type="text" placeholder="&#128100; Nombre" required autofocus>
+                    </li>
+                    <li>
+                        <input class="input" name="Email" type="text" placeholder="&#9993; Correo" required autofocus>
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <input id="boton" class="button-sub" type="submit" value="REGISTRAR">
+                <input id="boton" class="button-res" type="reset" value="LIMPIAR">
+            </div>
+        </form>
     </dialog>
 
     <div class="Carrusel" id="Carrusel">
@@ -103,6 +107,10 @@
         {
             $dialog.close();
         })
+    </script>
+
+    <script>
+        
     </script>
 
 </body>
