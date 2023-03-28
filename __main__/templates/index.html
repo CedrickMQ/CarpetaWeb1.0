@@ -8,7 +8,18 @@
     <title>Document</title>
 </head>
 <body>
-    <header></header>
+
+    {% with messages = get_flashed_messages() %}
+
+    {% if messages %}
+    
+
+    <header class="alert" role="alert">
+        <strong> {{ messages }} </strong>
+    </header>
+
+    {% endif %}
+    {% endwith %}
 
     <div class="head">
         <div class="logo">
@@ -16,30 +27,31 @@
         </div>
         <nav class="navbar">
             <a href="#">NOSOTROS</a>
-            <a href="/templates/login.html">CONTACTANOS</a>
+            <a href="#">CONTACTANOS</a>
             <a id="btnA">LOGIN</a>
         </nav>
     </div>
 
     <dialog class="Dia" id="dialog">
         <button  id="btnC"> x </button>
-        <form action="../static/Sql/Login.php" method="post">
+        <form class="formularioJoin" method="post" action="/templates/index.html">
             <div  id="bott">
                 <h5> INICIA SECION </h5>
                 <ul>
                     <li>
-                        <input class="input" name="Nombre" type="text" placeholder="&#128100; Nombre" required autofocus>
+                        <input class="input" name="Nombre" type="text" placeholder="&#128100; Usuario" required autofocus>
                     </li>
                     <li>
-                        <input class="input" name="Email" type="text" placeholder="&#9993; Correo" required autofocus>
+                        <input class="input" name="Email" type="text" placeholder="&#9993; Contraseña" required autofocus>
                     </li>
                 </ul>
             </div>
             <div>
-                <input id="boton" class="button-sub" type="submit" value="REGISTRAR">
+                <input id="boton" class="button-sub" type="submit" value="INGRESAR">
                 <input id="boton" class="button-res" type="reset" value="LIMPIAR">
             </div>
         </form>
+        <input id="botonT2" class="button-res" type="reset" value="REGISTRATE" onclick="location.href='/templates/Formulario.html'">
     </dialog>
 
     <div class="Carrusel" id="Carrusel">

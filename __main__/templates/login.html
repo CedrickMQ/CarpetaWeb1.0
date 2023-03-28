@@ -7,11 +7,9 @@
     <link rel="stylesheet" href="../static/Css/style-log.css">
     <title>El matasanos</title>
 </head>
-<body>
-    <header>
-    </header>
 
-    <div class="head">
+<body>
+    <header class="head">
         <div class="logo">
             <a> El matasanos </a>    
         </div>
@@ -19,17 +17,51 @@
             <a href="/templates/index.html">INICIO</a>
             <a href="#">NOSOTROS</a>
             <a href="#">CONTACTANOS</a>
-            <a href="">LOGIN</a>
         </nav>
-    </div>
+    </header>
 
-    <div id="basura"> 
-        <h1> fghj </h1> 
-    </div>
+    <section>
+        <div class="form-box" >
+            <div class="form-value">
+                <form action="/templates/login.html" method="post">
+                    <h2>login</h2>
 
-    <div class="logueo" id="logueo-base">
-        <h5>BIENVENIDO</h5>
-    </div> 
+                    {% with messages = get_flashed_messages() %}
 
+                    {% if messages %}
+                    
+                
+                    <div class="alert" role="alert">
+                        <strong> {{ messages }} </strong>
+                        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                    </div>
+                
+                    {% endif %}
+                    {% endwith %}
+
+                    <div class="inputbox">
+                        <ion-icon name="person-circle-outline"></ion-icon>
+                        <input type="Usuario" name="Usuario" required>
+                        <label for=""> Usuario </label>
+                    </div>
+                    <div class="inputbox">
+                        <ion-icon name="lock-closed-outline"></ion-icon>
+                        <input type="password" name="password" required>
+                        <label for=""> password </label>
+                    </div>
+                    <div class="Forget">
+                        <label for=""><input type="checkbox">Remember me</label>
+                        <a href="#">Forget password</a>
+                    </div>
+                    <button> log in </button>
+                    <div class="register">
+                        <p>Don't have a account <a href="Formulario.html">Register</a></p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>    
 </body>
 </html>

@@ -264,6 +264,15 @@ footer {
     background: #2A7886;
     color: #79BAC1;
  }
+#botonT2{
+    margin-top: 10px;
+    position: relative;
+    left: 25px;
+    width: 160px;
+    border-color: #512B58;
+    background: #512B58;
+    color: #F1F3F4;
+}
 
  .Dia div {
     margin-top: 10px;
