@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Reporte</title>
+</head>
+<body>
+    <h1>Reporte de datos</h1>
+    <table>
+        {% for row in data %}
+        <tr>
+            <td>{{ row.columna1 }}</td>
+            <td>{{ row.columna2 }}</td>
+            <td>{{ row.columna3 }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

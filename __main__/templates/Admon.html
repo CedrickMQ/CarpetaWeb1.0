@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../static/Css/style-control.css">
+    <link rel="stylesheet" href="../static/Css/style-Root.css">
     <title>El matasanos</title>
 </head>
 <body>
@@ -24,7 +24,7 @@
         <button  id="btnC"> x </button>
         <form class="formularioJoin" method="post" action="/GeneradorCitas">
             <div  id="bott">
-                <h5> Genera tu cita </h5>
+                <h5> Datos citas </h5>
                 <ul>
                     <li>
                         <input class="input" name="Dia" type="text" placeholder="&#128197; Dia de la cita" required autofocus>
@@ -40,54 +40,44 @@
         </form>
     </dialog>
 
+    <section id="p1">
+        <aside class="table-inicio">
+            <div>
+                <canvas id="MyChart"></canvas>
+            </div>
+        </aside>
+    </section>
     <section>
         <aside id="fondoBtn">
             <Button class="boton" id="btnA"> 
-                <p>Generar cita</p>
+                <p>Citas</p>
             </Button>
-            <p id="text-resalt">Generar cita</p>
+            <p id="text-resalt">Citas</p>
         </aside>
-        <aside class="table-inicio">
-            <div>
-                <p> Citas en la semana </p>
-                <canvas id="MyChart"></canvas>
-            </div>
-
-            <div>
-                {% if valor == 0 or data == "No tiene citas" %}
-                <table><tr> <th> {{ data }} </th> </tr></table>
-                {% else %}
-                <table>
-                    <tr>
-                        <th> ID </th>
-                        <th> Nombre </th>
-                        <th> Dia de la cita </th>
-                    </tr>
-
-                    {% for row in data %}
-                    <tr>
-                        <td>{{ row[0] }}</td>
-                        <td>{{ row[1] }}</td>
-                        <td>{{ row[2] }}</td>
-                    </tr>
-                    {% endfor %}
-    
-                </table>
-                <form action="/pdf">
-                    <div id="transparent">
-                        <button href="/pdf"> PDF </button>    
-                    </div>
-                </form>
-                {% endif %}
-            </div>
-
+        <aside id="fondoBtn2">
+            <Button class="boton2" id="btnA"> 
+                <p>Pacientes</p>
+            </Button>
+            <p id="text-resalt">Pacientes</p>
+        </aside>
+        <aside id="fondoBtn3">
+            <Button class="boton3" id="btnA"> 
+                <p>Especialidades</p>
+            </Button>
+            <p id="text-resalt2">Especialidades</p>
+        </aside>
+        <aside id="fondoBtn4">
+            <Button class="boton4" id="btnA"> 
+                <p>Doctores</p>
+            </Button>
+            <p id="text-resalt2">Doctores</p>
         </aside>
     </section>
 
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script>
         const ctx = document.getElementById('MyChart');
-        var Lunes = {{ Di_Lunes }};
+        var Lunes = 1; //{{ Di_Lunes }};
 
         new Chart(ctx, {
         type: 'bar',

@@ -1,0 +1,197 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'poppins', sans-serif;
+}
+/* Barra de precentacion */
+.head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 63px;
+    background: #2A7886;
+    position:fixed;
+    width: 100%;
+    z-index: 5;
+}
+.navbar {
+    display: flex;
+    margin-top: 10px;
+}
+.logo {
+    margin-left: 30px;
+}
+.logo a {
+    text-decoration: none;
+    color:#F1F3F4;
+    text-transform: uppercase;
+    font-size: 20px;
+}
+.navbar a {
+    display: block;
+    padding: 20px 20px;
+    margin-bottom: 10px;
+    color: #F1F3F4;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 20px;
+}
+.navbar p {
+    display: block;
+    padding: 20px 20px;
+    margin-bottom: 10px;
+    color: #F1F3F4;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 20px;
+}
+
+.navbar a:hover {
+    background: #79BAC1;
+}
+/* FIN Barra de precentacion */
+
+/* Boton de citas */
+#fondoBtn{
+    background-color: black;
+    float: left;
+    width: 400px;
+    height: 750px;
+
+    color: #F1F3F4;
+    font-size: 40px;
+
+    position: relative;
+    z-index: 0;
+}
+#text-resalt{
+    position: relative;
+    top: 377px;
+    left: 75px;
+}
+
+.boton {
+    opacity: 1;
+    transition: opacity 0.5s;
+    border: 0px;
+
+    background-image: url('../Images/Citas.jpg');
+    background-position: center top;
+    background-size: 900px 688px;
+
+    color: #F1F3F4;
+    font-size: 40px;
+
+    margin-top: 63px; /* 63 */
+    width: 400px;
+    height: 688px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+.boton:hover {
+    opacity: 0.5;
+}
+/* Boton de citas */
+
+/* tablas */
+.table-inicio {
+    float: left;
+}
+
+.table-inicio p {
+    text-align: center;
+}
+
+.table-inicio div {
+    margin-top: 83px;
+    margin-left: 30px;
+
+    width: 410px;
+    border: 5px solid #2A7886;
+    border-radius: 20px;
+}
+
+.table-inicio table {
+    margin: 0 auto;
+    text-align: center;
+    table-layout: fixed;
+    border-collapse: collapse;
+}
+
+.table-inicio td,th {
+    padding: 7px 20px ;
+}
+
+.table-inicio button {
+    border: 0;
+    background-color: #f1f3f400;
+    color: #2A7886;
+    font-size: 20px;
+}
+
+#transparent {
+    border: 10px;
+    margin-left: 0;
+    margin-top: 0;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+}
+/* generador de citas */
+.Dia {
+    height: 300px;
+    width: 250px;
+    position: relative;
+    top: 25%;
+    left: 35%;
+    border: 4px solid #79BAC1;
+    border-radius: 15px;
+}
+.Dia button {
+    font-size: 15px;
+    position: relative;
+    left: 94%;
+    border: #F1F3F4;
+    background: #f1f3f400;
+    color: #2A7886;
+    text-transform: uppercase;
+    font-weight: bolder;
+}
+.Dia h5 {
+    margin-top: 10px;
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 45px;
+    color: #2A7886;
+}
+.Dia ul {
+    margin-top: 30px;
+    text-align: center;
+}
+.Dia li {
+    margin-top: 15px;
+}
+.Dia input {
+    height: 35px;
+    width: 80%;
+    font-size: 15px;
+}
+
+.btn-cita {
+    position: absolute;
+    top: 80%;
+    left: 25%;
+    border: 3px solid #79BAC1;
+    width: 50%;
+    border-radius: 14px;
+    text-align: center;
+}
+.btn-cita input {
+    background-color: #79bac100;
+    color: #2A7886;
+    border: 0;
+    margin-top: 0%;
+}

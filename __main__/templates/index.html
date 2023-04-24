@@ -8,18 +8,7 @@
     <title>Document</title>
 </head>
 <body>
-
-    {% with messages = get_flashed_messages() %}
-
-    {% if messages %}
-    
-
-    <header class="alert" role="alert">
-        <strong> {{ messages }} </strong>
-    </header>
-
-    {% endif %}
-    {% endwith %}
+    <header></header>
 
     <div class="head">
         <div class="logo">
@@ -39,10 +28,10 @@
                 <h5> INICIA SECION </h5>
                 <ul>
                     <li>
-                        <input class="input" name="Nombre" type="text" placeholder="&#128100; Usuario" required autofocus>
+                        <input class="input" name="Usuario" type="text" placeholder="&#128100; Usuario" required autofocus>
                     </li>
                     <li>
-                        <input class="input" name="Email" type="text" placeholder="&#9993; Contraseña" required autofocus>
+                        <input class="input" name="password" type="text" placeholder="&#9993; Contraseña" required autofocus>
                     </li>
                 </ul>
             </div>
