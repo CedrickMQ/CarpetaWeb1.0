@@ -25,17 +25,34 @@
         <form class="formularioJoin" method="post" action="/GeneradorCitas">
             <div  id="bott">
                 <h5> Datos citas </h5>
-                <ul>
-                    <li>
-                        <input class="input" name="Dia" type="text" placeholder="&#128197; Dia de la cita" required autofocus>
-                    </li>
-                    <li>
-                        <input class="input" name="NombreDoc" type="text" placeholder="&#128100; Nombre del Doctor" required autofocus>
-                    </li>
-                </ul>
+                <input class="input" name="Dia" type="text" placeholder="&#128197; Dia de la cita" required autofocus>
+                <input class="input" name="NombreDoc" type="text" placeholder="&#128100; Nombre del Doctor" required autofocus>
+                <input class="input" name="Hora" type="text" placeholder="&#128100; Hora" required autofocus>
             </div>
             <div class="btn-cita">
                 <input id="boton" class="button-sub" type="submit" value="Generar cita">
+            </div>
+            <div id="tablee">
+                {% if valor == 0 or data == "No tiene citas" %}
+                <table><tr> <th> {{ data }} </th> </tr></table>
+                {% else %}
+                <table>
+                    <tr>
+                        <th> ID </th>
+                        <th> Nombre </th>
+                        <th> Dia de la cita </th>
+                    </tr>
+
+                    {% for row in data %}
+                    <tr>
+                        <td>{{ row[0] }}</td>
+                        <td>{{ row[1] }}</td>
+                        <td>{{ row[2] }}</td>
+                    </tr>
+                    {% endfor %}
+    
+                </table>
+                {% endif %}
             </div>
         </form>
     </dialog>
@@ -47,6 +64,7 @@
             </div>
         </aside>
     </section>
+
     <section>
         <aside id="fondoBtn">
             <Button class="boton" id="btnA"> 

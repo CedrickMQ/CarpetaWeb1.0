@@ -8,6 +8,7 @@ from reportlab.lib.units import inch
 from reportlab.pdfgen import canvas
 from reportlab.platypus import SimpleDocTemplate, Table, TableStyle
 import os
+import smtplib
 
 
 path_pdf = "C:/Program Files/wkhtmltopdf/bin/wkhtmltopdf.exe"
@@ -81,7 +82,10 @@ def Form():
     
 @app.route('/templates/Admon.html')
 def Administracion():
-    return render_template('Admon.html')
+    cursor = database.cursor()
+    cursor.execute("SELECT citas.idCitas, Doctores.nombre as NombreDoc, citas.Dia_semana FROM citas JOIN Doctores ON citas.Doctores_idDoctores = doctores.idDoctores;")
+    data = cursor.fetchall()
+    return render_template('Admon.html', data=data)
     
 
 @app.route('/templates/Control.html')
@@ -173,6 +177,23 @@ def crear_pdf():
     archivo_pdf.build(elementos)
     cursor.close()
 
+def enviarCorreos():
+    sender_email = 'cedrick.marcial25@unach.com'
+    sender_password = 'tu_contraseña'
+    receiver_email = 'correo_destino@gmail.com'
+
+    with smtplib.SMTP('smtp.gmail.com', 587) as smtp:
+        smtp.starttls()
+        smtp.login(sender_email, sender_password)
+
+        subject = 'Prueba de correo desde Flask'
+        body = 'Este es un correo de prueba enviado desde Flask.'
+
+        message = f'Subject: {subject}\n\n{body}'
+
+        smtp.sendmail(sender_email, receiver_email, message)
+
+    return 'Correo enviado'
 
 @app.route('/pdf')
 def Gatillo_pdf():

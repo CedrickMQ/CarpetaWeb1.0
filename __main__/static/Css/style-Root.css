@@ -260,16 +260,29 @@
 
 #transparent {
     border: 10px;
-    margin-left: 0;
+    margin-right: 0;
     margin-top: 0;
     height: 100%;
     width: 100%;
     text-align: center;
 }
+
+
+#tablee {
+    margin-top: 20px;
+    position: absolute;
+    left: 60px;
+    text-align: center;
+
+}
 /* generador de citas */
+#bott{
+    margin: 5px 30px;
+}
+
 .Dia {
-    height: 300px;
-    width: 250px;
+    height: 50%;
+    width: 50%;
     position: relative;
     top: 25%;
     left: 35%;
@@ -293,27 +306,19 @@
     margin-bottom: 45px;
     color: #2A7886;
 }
-.Dia ul {
-    margin-top: 30px;
-    text-align: center;
-}
-.Dia li {
-    margin-top: 15px;
-}
 .Dia input {
+    place-self: center;
     height: 35px;
-    width: 80%;
+    width: 30%;
     font-size: 15px;
 }
 
 .btn-cita {
-    position: absolute;
-    top: 80%;
-    left: 25%;
     border: 3px solid #79BAC1;
     width: 50%;
-    border-radius: 14px;
+    border-radius: 5px;
     text-align: center;
+    margin-left: 90px;
 }
 .btn-cita input {
     background-color: #79bac100;
